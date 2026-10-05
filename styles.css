@@ -1,0 +1,130 @@
+:root {
+  --bg: #f5f7fb;
+  --surface: #ffffff;
+  --text: #213547;
+  --muted: #607285;
+  --accent: #006a77;
+  --accent-2: #83c5be;
+  --border: #dde5ed;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Avenir Next", "Helvetica Neue", sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top right, #e6f7f8 0%, var(--bg) 45%, #eef4ff 100%);
+  line-height: 1.5;
+}
+
+.container {
+  width: min(980px, 92vw);
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.site-header,
+.site-footer {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  border-bottom: none;
+  margin-top: 28px;
+  padding: 18px 0;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-header .container {
+  padding: 16px 0;
+}
+
+.brand {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 700;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  margin-left: 16px;
+}
+
+main {
+  padding: 24px 0;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 30px rgba(29, 42, 55, 0.06);
+}
+
+.hero h1 {
+  margin: 0 0 8px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+button,
+.button-link {
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 14px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button:hover,
+.button-link:hover {
+  background: #055c66;
+}
+
+input {
+  width: 100%;
+  max-width: 360px;
+  margin: 6px 0 10px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
